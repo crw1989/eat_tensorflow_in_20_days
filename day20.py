@@ -60,3 +60,19 @@ def train(epoch):
 
 
 train(1000)
+
+'''
+class FocalLoss(losses.Loss):
+    
+    def __init__(self,gamma=2.0,alpha=0.25):
+        self.gamma = gamma
+        self.alpha = alpha
+
+    def call(self,y_true,y_pred):
+        
+        pt_1 = tf.where(tf.equal(y_true, 1), y_pred, tf.ones_like(y_pred))
+        pt_0 = tf.where(tf.equal(y_true, 0), y_pred, tf.zeros_like(y_pred))
+        loss = -tf.sum(self.alpha * tf.pow(1. - pt_1, self.gamma) * tf.log(1e-07+pt_1)) \
+           -tf.sum((1-self.alpha) * tf.pow( pt_0, self.gamma) * tf.log(1. - pt_0 + 1e-07))
+        return loss
+'''
