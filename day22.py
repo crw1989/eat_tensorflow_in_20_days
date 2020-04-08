@@ -37,7 +37,6 @@ def loss():
 def train(epoch):
     for i in tf.range(epoch ** 2):
         optimizer.minimize(loss,[x])
-
         tf.print("epoch",i," ",optimizer.iterations,"：",x,"")
 train(1000)
 #=========================使用model.fit()
