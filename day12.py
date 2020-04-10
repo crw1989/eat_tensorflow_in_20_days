@@ -55,4 +55,10 @@ flag = brr[..., 0] > 0
 # tf.print(brr[brr[..., 0] > 0])
 # tf.print(tf.boolean_mask(brr,flag))
 tf.print(tf.boolean_mask(arr,tf.ones_like(arr,dtype=tf.bool)))
+#=====================索引访问
+import tensorflow as tf
+
+demo = tf.reshape(tf.range(32*13*13*3*25),shape=[32,13,13,3,25])
+tf.print(demo[...,:1].shape) # 【32，13，13，3，1】
+
 
