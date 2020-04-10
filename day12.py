@@ -48,17 +48,15 @@ crr = tf.concat([arr, brr], -1)
 # =================== tf.boolean_mask
 # 1.输出的维度为n-k+1
 #   也即如果每个布尔值修饰的是输入中的d维张量，那么该函数返回的是d+1
-arr = tf.reshape(tf.range(16), shape=(4, 4))
+arr = tf.reshape(tf.range(16 * 4), shape=(4, 4, 4))
 tf.print(arr)
 brr = arr[arr[..., 0] % 2 == 0]
 flag = brr[..., 0] > 0
-# tf.print(brr[brr[..., 0] > 0])
+tf.print(brr[brr[..., 0] > 0])
 # tf.print(tf.boolean_mask(brr,flag))
-tf.print(tf.boolean_mask(arr,tf.ones_like(arr,dtype=tf.bool)))
-#=====================索引访问
+# tf.print(tf.boolean_mask(arr,tf.ones_like(arr,dtype=tf.bool)))
+# =====================索引访问
 import tensorflow as tf
 
-demo = tf.reshape(tf.range(32*13*13*3*25),shape=[32,13,13,3,25])
-tf.print(demo[...,:1].shape) # 【32，13，13，3，1】
-
-
+demo = tf.reshape(tf.range(32 * 13 * 13 * 3 * 25), shape=[32, 13, 13, 3, 25])
+# tf.print(demo[...,:1].shape) # 【32，13，13，3，1】
