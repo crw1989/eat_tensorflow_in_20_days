@@ -36,8 +36,23 @@ idx = tf.squeeze(tf.argsort(a, axis=0))
 # tf.print(tf.gather(a,idx,axis=0))
 # ================== 矩阵运算
 a = tf.random.uniform(shape=[5, 5], minval=-10, maxval=10, dtype=tf.float32)
-tf.print(a)
-tf.print('================================')
+# tf.print(a)
+# tf.print('================================')
 # tf.print(tf.sqrt(tf.reduce_sum(a**2)))
 # tf.print(tf.linalg.norm(a))
 # tf.print(tf.linalg.normalize(a, axis=-1))
+# =================== tf.tile
+arr = tf.tile(tf.reshape(tf.range(12), (12, 1, 1)), (1, 12, 1))
+brr = tf.tile(tf.reshape(tf.range(12), (1, 12, 1)), (12, 1, 1))
+crr = tf.concat([arr, brr], -1)
+# =================== tf.boolean_mask
+# 1.输出的维度为n-k+1
+#   也即如果每个布尔值修饰的是输入中的d维张量，那么该函数返回的是d+1
+arr = tf.reshape(tf.range(16), shape=(4, 4))
+tf.print(arr)
+brr = arr[arr[..., 0] % 2 == 0]
+flag = brr[..., 0] > 0
+# tf.print(brr[brr[..., 0] > 0])
+# tf.print(tf.boolean_mask(brr,flag))
+tf.print(tf.boolean_mask(arr,tf.ones_like(arr,dtype=tf.bool)))
+
