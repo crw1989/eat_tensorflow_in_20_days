@@ -64,3 +64,7 @@ demo = tf.reshape(tf.range(32 * 13 * 13 * 3 * 25), shape=[32, 13, 13, 3, 25])
 flag = tf.random.uniform(shape=(3,4),minval=0,maxval=2,dtype=tf.int32)
 val = tf.reshape(tf.range(12),shape=(3,4))
 tf.print(K.switch(flag,val,tf.zeros_like(flag))==tf.where(tf.cast(flag,dtype=tf.bool),val,tf.zeros_like(flag)))
+# =====================tensor转numpy
+val = tf.constant(100,dtype=tf.int32)
+print(str(val.numpy()))
+#=======================
