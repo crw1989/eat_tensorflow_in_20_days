@@ -4,7 +4,7 @@ import tensorflow as tf
 #    a.当我们再次用相同的输入参数类型调用这个被@tf.function装饰的函数时，不会输出tracing内容
 #2. 运行计算图
 import tensorflow as tf
-import numpy as np
+import numpy_aa as np
 
 @tf.function
 def myadd(a,b):

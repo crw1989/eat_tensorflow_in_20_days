@@ -1,6 +1,6 @@
 #=========================使用tf.Module来封装tf.Variables，来结构化Autograph
 import tensorflow as tf
-import numpy as np
+import numpy_aa as np
 
 
 class AddModel(tf.Module):

@@ -1,6 +1,6 @@
 # ===========================tensorflow 张量
 import tensorflow as tf
-import numpy as np
+import numpy_aa as np
 
 value = tf.constant(12, dtype=tf.int32)
 value = tf.constant([1, 2, 3], dtype=tf.int32)

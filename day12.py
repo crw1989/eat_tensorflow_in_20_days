@@ -1,5 +1,5 @@
 import tensorflow as tf
-import numpy as np
+import numpy_aa as np
 import tensorflow.keras.backend as K
 # ================== 标量运算
 a = tf.constant([[1, 2], [3, 4]], dtype=tf.float32)

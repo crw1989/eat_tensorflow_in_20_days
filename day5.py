@@ -1,5 +1,5 @@
 #===============tensorflow数据类型与numpy数据类型相对应:int32、int64、float32、float64、bool============================
-import numpy as np
+import numpy_aa as np
 import tensorflow as tf
 
 int32 = tf.constant(1)

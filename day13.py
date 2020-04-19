@@ -5,7 +5,7 @@
 # =================================
 
 import tensorflow as tf
-import numpy as np
+import numpy_aa as np
 
 arr = np.array([])
 

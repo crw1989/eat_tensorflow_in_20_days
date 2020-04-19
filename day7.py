@@ -1,5 +1,5 @@
 import tensorflow as tf
-import numpy as np
+import numpy_aa as np
 
 # ===================自动微分机制=========================
 x = tf.Variable(0, name='x', dtype=tf.float32)
