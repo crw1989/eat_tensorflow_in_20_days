@@ -59,3 +59,15 @@ def fibonaccie(n):
 
 # for v in fibonaccie(100):
 #     print(v)
+
+
+'''python模块
+python模块是一个python文件，以.py结尾，包含了Python对象的定义和python语句。
+python模块中可以定义类、模块、变量也可以包含可执行代码
+
+
+1. import语句。可以使用import 模块名来导入模块。使用模块内部的函数名时使用"."，模块名.函数名
+2. 一个模块只会导入一次，不管你使用了多少个import语句
+3. from .... import ... 会将模块中的一部分导入到当前的名称空间中
+4. 搜索路径，在进行模块导入时，首先会查看当前工作路径下是否包含该模块的定义
+'''
