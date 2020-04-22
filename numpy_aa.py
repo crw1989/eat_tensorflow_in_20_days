@@ -57,4 +57,21 @@ yesterday = np.datetime64('today','D')
 yesterday = np.timedelta64(1,'D')
 # print(yesterday)
 arr0 = np.zeros(shape=(5,5)) + np.arange(5).reshape(5,1)
-print(arr0)
+# print(arr0)
+
+# ==================== numpy 视图
+
+arr = np.arange(3*12).reshape(3,4,3)
+# print(arr)
+def func(brr):
+    global arr
+    print(arr is brr)
+    brr[:,:,0] = -1
+func(arr)
+# print(arr)
+
+# ==================== numpy
+arr = np.arange(36).reshape(6,6)
+print(arr)
+print('================')
+print(arr[1:-1])

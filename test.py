@@ -1,1 +1,1 @@
-print(slice(None))
+floor

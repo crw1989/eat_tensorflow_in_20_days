@@ -57,6 +57,7 @@ def fibonaccie(n):
         yield a
         a, b = b, a + b
 
+
 # for v in fibonaccie(100):
 #     print(v)
 
@@ -71,3 +72,11 @@ python模块中可以定义类、模块、变量也可以包含可执行代码
 3. from .... import ... 会将模块中的一部分导入到当前的名称空间中
 4. 搜索路径，在进行模块导入时，首先会查看当前工作路径下是否包含该模块的定义
 '''
+
+'''random
+'''
+import random
+
+random.randint()
+random.uniform()
+random.random()
