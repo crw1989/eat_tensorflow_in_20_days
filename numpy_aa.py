@@ -50,28 +50,36 @@ val = np.random.random(1)
 # print(np.round(0.49).astype(np.int))
 
 
-
 # =================== excercise
 # yesterday = np.datetime64('today','D') - np.timedelta64(1,'D')
-yesterday = np.datetime64('today','D')
-yesterday = np.timedelta64(1,'D')
+yesterday = np.datetime64('today', 'D')
+yesterday = np.timedelta64(1, 'D')
 # print(yesterday)
-arr0 = np.zeros(shape=(5,5)) + np.arange(5).reshape(5,1)
+arr0 = np.zeros(shape=(5, 5)) + np.arange(5).reshape(5, 1)
 # print(arr0)
 
 # ==================== numpy 视图
 
-arr = np.arange(3*12).reshape(3,4,3)
+arr = np.arange(3 * 12).reshape(3, 4, 3)
+
+
 # print(arr)
 def func(brr):
     global arr
     print(arr is brr)
-    brr[:,:,0] = -1
+    brr[:, :, 0] = -1
+
+
 func(arr)
 # print(arr)
 
 # ==================== numpy
-arr = np.arange(36).reshape(6,6)
-print(arr)
-print('================')
-print(arr[1:-1])
+arr = np.arange(36).reshape(6, 6)
+# print(arr)
+# print('================')
+# print(arr[1:-1])
+
+# ==================== newaxis
+arr = np.array([1, 2, 3])
+print(arr[:, np.newaxis])
+print(arr[np.newaxis, :])
